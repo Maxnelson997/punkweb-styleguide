@@ -1,0 +1,197 @@
+/**
+https://yeun.github.io/open-color/
+
+Yellow0 - #fff9db
+Gray4 - #ced4da
+Gray7 - #343a40
+Blue4 - #4dadf7
+Blue5 - #329af0
+Blue6 - #228ae6
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  color: #343a40;
+  font-family: 'Montserrat';
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans';
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+img, iframe {
+	max-width: 100%;
+}
+
+hr {
+  background-color: #ced4da;
+  border: 0;
+  border-radius: 2px;
+  color: #ced4da;
+  height: 2px;
+  width: 100%;
+}
+
+fieldset {
+  border-radius: 4px;
+  border: 2px solid #ced4da;
+}
+
+a {
+  transition: color 0.4s ease;
+  text-decoration: none;
+}
+
+a:link, a:visited, a:hover {
+  color: #329af0;
+}
+
+a:hover {
+  color: #4dadf7;
+}
+
+a:active {
+  color: #228ae6;
+}
+
+input {
+  appearance: none;
+  outline: none;
+}
+
+input:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="url"],
+input[type="tel"], input[type="number"], input[type="search"], input[type="date"],
+input[type="time"], input[type="datalist"], input[type="color"],
+select, textarea {
+  border: 2px solid #ced4da;
+  border-radius: 2px;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  padding: 0.25rem 0.5rem;
+}
+
+input[type="color"] {
+  padding: 0;
+}
+
+select optgroup {
+  background-color: #329af0;
+  color: white;
+}
+
+select option {
+  color: #343a40;
+}
+
+table {
+  border: none;
+  outline: none;
+  border-collapse: collapse;
+  max-height: 50px;
+  overflow-y: auto;
+  text-align: left;
+  width: 100%;
+}
+
+table caption {
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+th, td {
+  border: 2px solid #ced4da;
+  padding: 1rem;
+}
+
+th {
+  letter-spacing: 1px;
+}
+
+thead {
+  background-color: #329af0;
+  color: white;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f1f3f5;
+}
+
+tfoot {
+  background-color: #dee2e6;
+}
+
+blockquote {
+  background-color: #fff9db;
+  border-radius: 4px;
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+pre {
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+pre, code {
+  background-color: #fff9db;
+}
+
+mark {
+  background-color: #fff9db;
+}
+
+label {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+legend {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.button {
+  background-color: #329af0;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  display: inline-block;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.4s ease;
+}
+
+.button:hover {
+  background-color: #4dadf7;
+}
+
+.button:active {
+  background-color: #228ae6;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 1rem;
+  width: 100%;
+}
