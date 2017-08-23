@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 html, body {
-  color: #343a40;
+  color: #495057;
   font-family: 'Montserrat';
   font-size: 100%;
   margin: 0;
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
   .breadcrumb li {
     display: inline; }
     .breadcrumb li a {
-      color: #22b8cf; }
+      color: #329af0; }
   .breadcrumb li + li:before {
     color: #adb5bd;
     content: "/\00a0";
@@ -66,11 +66,11 @@ details, summary {
   outline: none; }
 
 a {
-  color: #15aabf;
+  color: #1081df;
   text-decoration: none;
   transition: color 0.25s ease-in-out, text-shadow 0.25s ease-in-out; }
   a:link, a:visited {
-    color: #15aabf; }
+    color: #1081df; }
   a:hover {
     text-decoration: underline; }
 
@@ -103,7 +103,7 @@ table {
   table th {
     letter-spacing: 1px; }
   table thead {
-    background-color: #22b8cf;
+    background-color: #329af0;
     color: white;
     text-align: center; }
   table tr:nth-child(even) {
@@ -231,12 +231,12 @@ input[type="range"]:focus::-ms-fill-upper {
 input:focus, select:focus, textarea:focus {
   box-shadow: none;
   outline: none !important;
-  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 6px #22b8cf;
-  border-color: #22b8cf; }
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 6px #329af0;
+  border-color: #329af0; }
 
 input:invalid, select:invalid, textarea:invalid {
-  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 6px #f03e3e;
-  border-color: #f03e3e; }
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 6px #e03131;
+  border-color: #e03131; }
 
 select optgroup {
   /*background-color: $primary;*/
@@ -253,17 +253,17 @@ progress, progress[value] {
   border: 1px solid #ced4da;
   border-radius: 2px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
-  color: #22b8cf; }
+  color: #329af0; }
 
 progress::-ms-fill {
-  background-color: #22b8cf;
+  background-color: #329af0;
   border: none;
   border-radius: 1px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
-  color: #22b8cf; }
+  color: #329af0; }
 
 progress::-moz-progress-bar {
-  background-color: #22b8cf;
+  background-color: #329af0;
   border-radius: 1px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1); }
 
@@ -271,14 +271,14 @@ progress::-webkit-progress-bar {
   background-color: transparent; }
 
 progress::-webkit-progress-value {
-  background-color: #22b8cf;
+  background-color: #329af0;
   border-radius: 1px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1); }
 
 .button {
   appearance: none;
-  background-color: #22b8cf;
-  border: none;
+  background-color: #329af0;
+  border: 1px solid transparent;
   border-radius: 2px;
   color: white;
   display: inline-block;
@@ -291,12 +291,291 @@ progress::-webkit-progress-value {
   text-align: center;
   text-decoration: none;
   transition: background-color 0.4s ease-in-out; }
+  .button:hover {
+    background-color: #4aa6f2; }
+  .button:active {
+    background-color: #1081df; }
+  .button-secondary {
+    appearance: none;
+    background-color: #495057;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: white;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    outline: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.4s ease-in-out; }
+    .button-secondary:hover {
+      background-color: #555d65; }
+    .button-secondary:active {
+      background-color: #32373b; }
+  .button-success {
+    appearance: none;
+    background-color: #37b24d;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: white;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    outline: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.4s ease-in-out; }
+    .button-success:hover {
+      background-color: #3fc457; }
+    .button-success:active {
+      background-color: #2b8b3c; }
+  .button-error {
+    appearance: none;
+    background-color: #e03131;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: white;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    outline: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.4s ease-in-out; }
+    .button-error:hover {
+      background-color: #e34747; }
+    .button-error:active {
+      background-color: #c11d1d; }
+  .button-warning {
+    appearance: none;
+    background-color: #ffd43b;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: white;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    outline: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.4s ease-in-out;
+    color: #343a40; }
+    .button-warning:hover {
+      background-color: #ffda55; }
+    .button-warning:active {
+      background-color: #ffc908; }
+  .button-info {
+    appearance: none;
+    background-color: #3bc9db;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: white;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    outline: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.4s ease-in-out; }
+    .button-info:hover {
+      background-color: #51cfdf; }
+    .button-info:active {
+      background-color: #23aec0; }
 
-.button:hover {
-  background-color: #3bc9db; }
-
-.button:active {
-  background-color: #15aabf; }
+.button-hollow {
+  appearance: none;
+  background-color: #329af0;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: white;
+  display: inline-block;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  outline: none;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.4s ease-in-out;
+  background-color: transparent;
+  border: 1px solid #329af0;
+  color: #329af0; }
+  .button-hollow:hover {
+    background-color: #4aa6f2; }
+  .button-hollow:active {
+    background-color: #1081df; }
+  .button-hollow:hover {
+    background-color: #329af0;
+    color: white; }
+  .button-hollow:active {
+    background-color: #1081df;
+    color: white; }
+  .button-hollow-secondary {
+    appearance: none;
+    background-color: #495057;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: white;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    outline: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.4s ease-in-out;
+    background-color: transparent;
+    border: 1px solid #495057;
+    color: #495057; }
+    .button-hollow-secondary:hover {
+      background-color: #555d65; }
+    .button-hollow-secondary:active {
+      background-color: #32373b; }
+    .button-hollow-secondary:hover {
+      background-color: #495057;
+      color: white; }
+    .button-hollow-secondary:active {
+      background-color: #32373b;
+      color: white; }
+  .button-hollow-success {
+    appearance: none;
+    background-color: #37b24d;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: white;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    outline: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.4s ease-in-out;
+    background-color: transparent;
+    border: 1px solid #37b24d;
+    color: #37b24d; }
+    .button-hollow-success:hover {
+      background-color: #3fc457; }
+    .button-hollow-success:active {
+      background-color: #2b8b3c; }
+    .button-hollow-success:hover {
+      background-color: #37b24d;
+      color: white; }
+    .button-hollow-success:active {
+      background-color: #2b8b3c;
+      color: white; }
+  .button-hollow-error {
+    appearance: none;
+    background-color: #e03131;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: white;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    outline: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.4s ease-in-out;
+    background-color: transparent;
+    border: 1px solid #e03131;
+    color: #e03131; }
+    .button-hollow-error:hover {
+      background-color: #e34747; }
+    .button-hollow-error:active {
+      background-color: #c11d1d; }
+    .button-hollow-error:hover {
+      background-color: #e03131;
+      color: white; }
+    .button-hollow-error:active {
+      background-color: #c11d1d;
+      color: white; }
+  .button-hollow-warning {
+    appearance: none;
+    background-color: #ffd43b;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: white;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    outline: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.4s ease-in-out;
+    background-color: transparent;
+    border: 1px solid #ffd43b;
+    color: #ffd43b;
+    color: #343a40; }
+    .button-hollow-warning:hover {
+      background-color: #ffda55; }
+    .button-hollow-warning:active {
+      background-color: #ffc908; }
+    .button-hollow-warning:hover {
+      background-color: #ffd43b;
+      color: white; }
+    .button-hollow-warning:active {
+      background-color: #ffc908;
+      color: white; }
+    .button-hollow-warning:hover {
+      color: #343a40; }
+    .button-hollow-warning:active {
+      color: #343a40; }
+  .button-hollow-info {
+    appearance: none;
+    background-color: #3bc9db;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: white;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    outline: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.4s ease-in-out;
+    background-color: transparent;
+    border: 1px solid #3bc9db;
+    color: #3bc9db; }
+    .button-hollow-info:hover {
+      background-color: #51cfdf; }
+    .button-hollow-info:active {
+      background-color: #23aec0; }
+    .button-hollow-info:hover {
+      background-color: #3bc9db;
+      color: white; }
+    .button-hollow-info:active {
+      background-color: #23aec0;
+      color: white; }
 
 /*
 How to style meters cross browser

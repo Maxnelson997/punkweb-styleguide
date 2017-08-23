@@ -1,29 +1,23 @@
+@import 'open-color';
+
+$primary: $oc-blue-5;
+$primary-hover: lighten($primary, 5%);
+$primary-active: darken($primary, 10%);
+
+$secondary: $oc-gray-7;
+$secondary-hover: lighten($secondary, 5%);
+$secondary-active: darken($secondary, 10%);
+
+$success: $oc-green-7;
+$error: $oc-red-8;
+$warning: $oc-yellow-4;
+$info: $oc-cyan-4;
+
+
 * { box-sizing: border-box; }
 
-$yellow-0: #fff9db;
-$gray-1: #f1f3f5;
-$gray-2: #e9ecef;
-$gray-3: #dee2e6;
-$gray-4: #ced4da;
-$gray-5: #adb5bd;
-$gray-7: #343a40;
-$cyan-4: #3bc9db;
-$cyan-5: #22b8cf;
-$cyan-6: #15aabf;
-$green-4: #69db7c;
-$green-5: #51cf66;
-$green-6: #40c057;
-$blue-4: #4dadf7;
-$blue-5: #329af0;
-$blue-6: #228ae6;
-$red-7: #f03e3e;
-
-$primary: $cyan-5;
-$primary-hover: $cyan-4;
-$primary-active: $cyan-6;
-
 html, body {
-  color: $gray-7;
+  color: $oc-gray-7;
   font-family: 'Montserrat';
   font-size: 100%;
   margin: 0;
@@ -45,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .breadcrumb {
-  background-color: $gray-2;
+  background-color: $oc-gray-2;
   border-radius: 4px;
   color: #707070;
   font-size: 13px;
@@ -63,17 +57,17 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
   li+li:before {
-    color: $gray-5;
+    color: $oc-gray-5;
     content: "/\00a0";
     margin: 0 0.5rem;
   }
 }
 
 hr {
-  background-color: $gray-4;
+  background-color: $oc-gray-4;
   border: 0;
   border-radius: 2px;
-  color: $gray-4;
+  color: $oc-gray-4;
   height: 2px;
   width: 100%;
 }
@@ -83,7 +77,7 @@ img, iframe {
 }
 
 blockquote {
-  background-color: $yellow-0;
+  background-color: $oc-yellow-0;
   border-radius: 4px;
   margin: 0 1rem;
   padding: 1rem;
@@ -115,7 +109,7 @@ a {
 }
 
 mark {
-  background-color: $yellow-0;
+  background-color: $oc-yellow-0;
 }
 
 pre {
@@ -124,7 +118,7 @@ pre {
 }
 
 pre, code {
-  background-color: $yellow-0;
+  background-color: $oc-yellow-0;
 }
 
 .tableContainer {
@@ -144,7 +138,7 @@ table {
     margin-bottom: 1rem;
   }
   th, td {
-    border: 2px solid $gray-4;
+    border: 2px solid $oc-gray-4;
     padding: 1rem;
   }
   th {
@@ -156,16 +150,16 @@ table {
     text-align: center;
   }
   tr:nth-child(even) {
-    background-color: $gray-1;
+    background-color: $oc-gray-1;
   }
   tfoot {
-    background-color: $gray-3;
+    background-color: $oc-gray-3;
   }
 }
 
 fieldset {
   border-radius: 4px;
-  border: 2px solid $gray-4;
+  border: 2px solid $oc-gray-4;
 }
 
 label {
@@ -181,7 +175,7 @@ legend {
 
 input, select, textarea {
   appearance: none;
-  border: 1px solid $gray-4;
+  border: 1px solid $oc-gray-4;
   border-radius: 2px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1);
   font-family: 'Montserrat';
@@ -210,7 +204,7 @@ input[type="range"]:focus {
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-  background: $gray-2;
+  background: $oc-gray-2;
   border: none;
   border-radius: 100px;
   box-shadow: none;
@@ -231,11 +225,11 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: $gray-2;
+  background: $oc-gray-2;
 }
 
 input[type="range"]::-moz-range-track {
-  background: $gray-2;
+  background: $oc-gray-2;
   border: none;
   border-radius: 100px;
   box-shadow: none;
@@ -266,14 +260,14 @@ input[type="range"]::-ms-track {
 }
 
 input[type="range"]::-ms-fill-lower {
-  background: $gray-4;
+  background: $oc-gray-4;
   border: none;
   border-radius: 100px;
   box-shadow: none;
 }
 
 input[type="range"]::-ms-fill-upper {
-  background: $gray-2;
+  background: $oc-gray-2;
   border: none;
   border-radius: 100px;
   box-shadow: none;
@@ -291,11 +285,11 @@ input[type="range"]::-ms-thumb {
 }
 
 input[type="range"]:focus::-ms-fill-lower {
-  background: $gray-4;
+  background: $oc-gray-4;
 }
 
 input[type="range"]:focus::-ms-fill-upper {
-  background: $gray-2;
+  background: $oc-gray-2;
 }
 
 input:focus, select:focus, textarea:focus {
@@ -306,8 +300,8 @@ input:focus, select:focus, textarea:focus {
 }
 
 input:invalid, select:invalid, textarea:invalid {
-  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1), 0px 0px 6px $red-7;
-  border-color: $red-7;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1), 0px 0px 6px $error;
+  border-color: $error;
 }
 
 select optgroup {
@@ -324,7 +318,7 @@ progress, progress[value] {
   -webkit-appearance: none;
   appearance: none;
   background-color: transparent;
-  border: 1px solid $gray-4;
+  border: 1px solid $oc-gray-4;
   border-radius: 2px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1);
   color: $primary;
@@ -354,10 +348,10 @@ progress::-webkit-progress-value {
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1);
 }
 
-.button {
+@mixin button($color) {
   appearance: none;
-  background-color: $primary;
-  border: none;
+  background-color: $color;
+  border: 1px solid transparent;
   border-radius: 2px;
   color: white;
   display: inline-block;
@@ -370,14 +364,76 @@ progress::-webkit-progress-value {
   text-align: center;
   text-decoration: none;
   transition: background-color 0.4s ease-in-out;
+
+  &:hover {
+    background-color: lighten($color, 5%);
+  }
+  &:active {
+    background-color: darken($color, 10%);
+  }
 }
 
-.button:hover {
-  background-color: $primary-hover;
+@mixin button-hollow($color) {
+  @include button($color);
+  background-color: transparent;
+  border: 1px solid $color;
+  color: $color;
+  &:hover {
+    background-color: $color;
+    color: white;
+  }
+  &:active {
+    background-color: darken($color, 10%);
+    color: white;
+  }
 }
 
-.button:active {
-  background-color: $primary-active;
+.button {
+  @include button($primary);
+
+  &-secondary {
+    @include button($secondary);
+  }
+  &-success {
+    @include button($success);
+  }
+  &-error {
+    @include button($error);
+  }
+  &-warning {
+    @include button($warning);
+    color: $oc-gray-8;
+  }
+  &-info {
+    @include button($info);
+  }
+}
+
+.button-hollow {
+  @include button-hollow($primary);
+
+  &-secondary {
+    @include button-hollow($secondary);
+  }
+  &-success {
+    @include button-hollow($success);
+  }
+  &-error {
+    @include button-hollow($error);
+  }
+  &-warning {
+    @include button-hollow($warning);
+    color: $oc-gray-8;
+    &:hover {
+      color: $oc-gray-8;
+    }
+    &:active {
+      color: $oc-gray-8;
+    }
+  }
+  &-info {
+    @include button-hollow($info);
+  }
 }
 
 /*
