@@ -20,6 +20,25 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   letter-spacing: 1px; }
 
+.breadcrumb {
+  background-color: #e9ecef;
+  border-radius: 4px;
+  color: #707070;
+  font-size: 13px;
+  letter-spacing: 1.3px;
+  list-style: none;
+  padding: .75rem 2rem;
+  margin: 0;
+  width: 100%; }
+  .breadcrumb li {
+    display: inline; }
+    .breadcrumb li a {
+      color: #22b8cf; }
+  .breadcrumb li + li:before {
+    color: #adb5bd;
+    content: "/\00a0";
+    margin: 0 0.5rem; }
+
 hr {
   background-color: #ced4da;
   border: 0;
@@ -65,13 +84,15 @@ pre {
 pre, code {
   background-color: #fff9db; }
 
+.tableContainer {
+  overflow-x: auto; }
+
 table {
   border: none;
-  outline: none;
   border-collapse: collapse;
-  max-height: 50px;
-  overflow-y: auto;
+  outline: none;
   text-align: left;
+  min-width: 480px;
   width: 100%; }
   table caption {
     font-size: 18px;

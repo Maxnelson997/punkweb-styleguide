@@ -5,6 +5,7 @@ $gray-1: #f1f3f5;
 $gray-2: #e9ecef;
 $gray-3: #dee2e6;
 $gray-4: #ced4da;
+$gray-5: #adb5bd;
 $gray-7: #343a40;
 $cyan-4: #3bc9db;
 $cyan-5: #22b8cf;
@@ -41,6 +42,31 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans';
   font-weight: bold;
   letter-spacing: 1px;
+}
+
+.breadcrumb {
+  background-color: $gray-2;
+  border-radius: 4px;
+  color: #707070;
+  font-size: 13px;
+  letter-spacing: 1.3px;
+  list-style: none;
+  padding: .75rem 2rem;
+  margin: 0;
+  width: 100%;
+
+  li {
+    display: inline;
+
+    a {
+      color: $primary;
+    }
+  }
+  li+li:before {
+    color: $gray-5;
+    content: "/\00a0";
+    margin: 0 0.5rem;
+  }
 }
 
 hr {
@@ -101,13 +127,16 @@ pre, code {
   background-color: $yellow-0;
 }
 
+.tableContainer {
+  overflow-x: auto;
+}
+
 table {
   border: none;
-  outline: none;
   border-collapse: collapse;
-  max-height: 50px;
-  overflow-y: auto;
+  outline: none;
   text-align: left;
+  min-width: 480px;
   width: 100%;
 
   caption {

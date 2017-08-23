@@ -30,6 +30,13 @@
       <h6>Heading 6</h6>
       <p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p>
       <hr />
+      <h1 id="breadcrumbs">Breadcrumbs</h1>
+      <ul class="breadcrumb">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li>Current</li>
+      </ul>
       <h1 id="text-block">Block Elements</h1>
       <h2 id="paragraph">Paragraphs and Images</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -140,33 +147,35 @@ for (i = 0; i < divs.length; ++i) {
       </dl>
       <hr />
       <h1 id="tables">Tables</h1>
-      <table>
-        <caption>This is a table caption</caption>
-        <thead>
-          <tr>
-            <th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-          </tr>
-          <tr class="even">
-            <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-          </tr>
-          <tr>
-            <td>Division 1</td><td>Division 2</td><td>Division 3</td>
-          </tr>
-          <tr>
-            <td colspan="3">A row with a cell spanning all 3 columns</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <th>Table Footer 1</th><th>Table Footer 2</th><th>Table Footer 3</th>
-          </tr>
-        </tfoot>
-      </table>
+      <div class="tableContainer">
+        <table>
+          <caption>This is a table caption</caption>
+          <thead>
+            <tr>
+              <th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+            </tr>
+            <tr class="even">
+              <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+            </tr>
+            <tr>
+              <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+            </tr>
+            <tr>
+              <td colspan="3">A row with a cell spanning all 3 columns</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>Table Footer 1</th><th>Table Footer 2</th><th>Table Footer 3</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
       <hr />
       <h1 id="media-elements">Media</h1>
       <h2>The Audio Element:</h2>
