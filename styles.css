@@ -2,16 +2,18 @@
 https://yeun.github.io/open-color/
 
 Yellow0 - #fff9db
+Gray1 - #f1f3f5
+Gray2 - #e9ecef
+Gray3 - #dee2e6
 Gray4 - #ced4da
 Gray7 - #343a40
 Blue4 - #4dadf7
 Blue5 - #329af0
 Blue6 - #228ae6
+Red7 - #f03e3e
 */
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html, body {
   color: #343a40;
@@ -29,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 img, iframe {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 hr {
@@ -47,21 +49,17 @@ fieldset {
 }
 
 a {
+  color: #228ae6;
   text-decoration: none;
   transition: color 0.25s ease-in-out, text-shadow 0.25s ease-in-out;
 }
 
-a:link, a:visited, a:hover {
+a:link, a:visited {
   color: #228ae6;
 }
 
 a:hover {
-  color: #329af0;
-}
-
-a:active {
-  color: #1c7cd6;
-  text-shadow: 0px 0px 6px #329af0;
+  text-decoration: underline;
 }
 
 input, select, textarea {
@@ -80,14 +78,112 @@ input[type="color"] {
   padding: 0;
 }
 
-input[type="range"], input[type="range"]:focus {
+input[type="range"] {
+  -webkit-appearance: none;
   border: none;
   box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="range"]:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #e9ecef;
+  border: none;
+  border-radius: 100px;
+  box-shadow: none;
+  cursor: pointer;
+  height: 7px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 1px 4px 0px rgba(152, 152, 152, .75);
+  cursor: pointer;
+  height: 22px;
+  margin-top: -8px;
+  width: 22px;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #e9ecef;
+}
+
+input[type="range"]::-moz-range-track {
+  background: #e9ecef;
+  border: none;
+  border-radius: 100px;
+  box-shadow: none;
+  cursor: pointer;
+  height: 7px;
+}
+
+input[type=range]::-moz-range-thumb {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 1px 4px 0px rgba(152, 152, 152, .75);
+  cursor: pointer;
+  height: 22px;
+  margin-top: -8px;
+  width: 22px;
+}
+
+input[type="range"]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-radius: 100px;
+  border-width: 22px 0;
+  box-shadow: none;
+  color: transparent;
+  cursor: pointer;
+  height: 7px;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: #ced4da;
+  border: none;
+  border-radius: 100px;
+  box-shadow: none;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: #e9ecef;
+  border: none;
+  border-radius: 100px;
+  box-shadow: none;
+}
+
+input[type="range"]::-ms-thumb {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 1px 4px 0px rgba(152, 152, 152, .75);
+  cursor: pointer;
+  height: 22px;
+  margin-top: -8px;
+  width: 22px;
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+  background: #ced4da;
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+  background: #e9ecef;
 }
 
 input:focus, select:focus, textarea:focus {
   box-shadow: none;
-  outline: none;
+  outline: none !important;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1), 0px 0px 6px #329af0;
   border-color: #329af0;
 }
@@ -98,12 +194,12 @@ input:invalid, select:invalid, textarea:invalid {
 }
 
 select optgroup {
-  background-color: #329af0;
-  color: white;
+  /*background-color: #329af0;*/
+  /*color: white;*/
 }
 
 select option {
-  color: #343a40;
+  /*color: #343a40;*/
 }
 
 table {
@@ -183,18 +279,39 @@ figcaption {
   font-weight: 300;
 }
 
-/*Firefox only at the moment*/
-progress {
+progress, progress[value] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
   appearance: none;
+  background-color: transparent;
   border: 1px solid #ced4da;
   border-radius: 2px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1);
-  transition: box-shadow 0.25s ease-in-out;
+  color: #329af0;
+}
+
+progress::-ms-fill {
+  background-color: #329af0;
+  border: none;
+  border-radius: 1px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1);
+  color: #329af0;
 }
 
 progress::-moz-progress-bar {
   background-color: #329af0;
-  box-shadow: inset 0px 14px 1px rgba(0, 0, 0, .1);
+  border-radius: 1px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1);
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+progress::-webkit-progress-value {
+  background-color: #329af0;
+  border-radius: 1px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1);
 }
 
 /*
@@ -202,6 +319,10 @@ How to style meters cross browser
 https://css-tricks.com/html5-meter-element/
 */
 meter {}
+
+details, summary {
+  outline: none;
+}
 
 .button {
   appearance: none;
@@ -227,6 +348,10 @@ meter {}
 
 .button:active {
   background-color: #228ae6;
+}
+
+.radio:focus, .radio:active {
+  outline: none;
 }
 
 .container {
