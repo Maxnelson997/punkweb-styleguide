@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  color: #343a40;
+  font-family: 'Montserrat';
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 320px; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 1rem;
+  width: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans';
+  font-weight: bold;
+  letter-spacing: 1px; }
+
+hr {
+  background-color: #ced4da;
+  border: 0;
+  border-radius: 2px;
+  color: #ced4da;
+  height: 2px;
+  width: 100%; }
+
+img, iframe {
+  max-width: 100%; }
+
+blockquote {
+  background-color: #fff9db;
+  border-radius: 4px;
+  margin: 0 1rem;
+  padding: 1rem; }
+
+figure {
+  margin: 2rem 1rem; }
+
+figcaption {
+  font-weight: 300; }
+
+details, summary {
+  outline: none; }
+
+a {
+  color: #15aabf;
+  text-decoration: none;
+  transition: color 0.25s ease-in-out, text-shadow 0.25s ease-in-out; }
+  a:link, a:visited {
+    color: #15aabf; }
+  a:hover {
+    text-decoration: underline; }
+
+mark {
+  background-color: #fff9db; }
+
+pre {
+  margin: 0 1rem;
+  padding: 1rem; }
+
+pre, code {
+  background-color: #fff9db; }
+
+table {
+  border: none;
+  outline: none;
+  border-collapse: collapse;
+  max-height: 50px;
+  overflow-y: auto;
+  text-align: left;
+  width: 100%; }
+  table caption {
+    font-size: 18px;
+    margin-bottom: 1rem; }
+  table th, table td {
+    border: 2px solid #ced4da;
+    padding: 1rem; }
+  table th {
+    letter-spacing: 1px; }
+  table thead {
+    background-color: #22b8cf;
+    color: white;
+    text-align: center; }
+  table tr:nth-child(even) {
+    background-color: #f1f3f5; }
+  table tfoot {
+    background-color: #dee2e6; }
+
+fieldset {
+  border-radius: 4px;
+  border: 2px solid #ced4da; }
+
+label {
+  font-weight: 300;
+  font-size: 14px; }
+
+legend {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  letter-spacing: 1px; }
+
+input, select, textarea {
+  appearance: none;
+  border: 1px solid #ced4da;
+  border-radius: 2px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+  font-family: 'Montserrat';
+  font-size: 16px;
+  outline: none;
+  padding: 0.25rem 0.5rem;
+  transition: box-shadow 0.25s ease-in-out; }
+
+input[type="color"] {
+  padding: 0; }
+
+input[type="range"] {
+  -webkit-appearance: none;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0; }
+
+input[type="range"]:focus {
+  border: none;
+  box-shadow: none;
+  outline: none; }
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #e9ecef;
+  border: none;
+  border-radius: 100px;
+  box-shadow: none;
+  cursor: pointer;
+  height: 7px; }
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 1px 4px 0px rgba(152, 152, 152, 0.75);
+  cursor: pointer;
+  height: 22px;
+  margin-top: -8px;
+  width: 22px; }
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #e9ecef; }
+
+input[type="range"]::-moz-range-track {
+  background: #e9ecef;
+  border: none;
+  border-radius: 100px;
+  box-shadow: none;
+  cursor: pointer;
+  height: 7px; }
+
+input[type=range]::-moz-range-thumb {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 1px 4px 0px rgba(152, 152, 152, 0.75);
+  cursor: pointer;
+  height: 22px;
+  margin-top: -8px;
+  width: 22px; }
+
+input[type="range"]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-radius: 100px;
+  border-width: 22px 0;
+  box-shadow: none;
+  color: transparent;
+  cursor: pointer;
+  height: 7px; }
+
+input[type="range"]::-ms-fill-lower {
+  background: #ced4da;
+  border: none;
+  border-radius: 100px;
+  box-shadow: none; }
+
+input[type="range"]::-ms-fill-upper {
+  background: #e9ecef;
+  border: none;
+  border-radius: 100px;
+  box-shadow: none; }
+
+input[type="range"]::-ms-thumb {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 1px 4px 0px rgba(152, 152, 152, 0.75);
+  cursor: pointer;
+  height: 22px;
+  margin-top: -8px;
+  width: 22px; }
+
+input[type="range"]:focus::-ms-fill-lower {
+  background: #ced4da; }
+
+input[type="range"]:focus::-ms-fill-upper {
+  background: #e9ecef; }
+
+input:focus, select:focus, textarea:focus {
+  box-shadow: none;
+  outline: none !important;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 6px #22b8cf;
+  border-color: #22b8cf; }
+
+input:invalid, select:invalid, textarea:invalid {
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 6px #f03e3e;
+  border-color: #f03e3e; }
+
+select optgroup {
+  /*background-color: $primary;*/
+  /*color: white;*/ }
+
+select option {
+  /*color: $gray-7;*/ }
+
+progress, progress[value] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid #ced4da;
+  border-radius: 2px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+  color: #22b8cf; }
+
+progress::-ms-fill {
+  background-color: #22b8cf;
+  border: none;
+  border-radius: 1px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+  color: #22b8cf; }
+
+progress::-moz-progress-bar {
+  background-color: #22b8cf;
+  border-radius: 1px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1); }
+
+progress::-webkit-progress-bar {
+  background-color: transparent; }
+
+progress::-webkit-progress-value {
+  background-color: #22b8cf;
+  border-radius: 1px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1); }
+
+.button {
+  appearance: none;
+  background-color: #22b8cf;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  display: inline-block;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  outline: none;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.4s ease-in-out; }
+
+.button:hover {
+  background-color: #3bc9db; }
+
+.button:active {
+  background-color: #15aabf; }
+
+/*
+How to style meters cross browser
+https://css-tricks.com/html5-meter-element/
+*/
+
+/*# sourceMappingURL=elements.css.map */

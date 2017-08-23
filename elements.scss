@@ -1,28 +1,40 @@
-/**
-https://yeun.github.io/open-color/
-
-Yellow0 - #fff9db
-Gray1 - #f1f3f5
-Gray2 - #e9ecef
-Gray3 - #dee2e6
-Gray4 - #495057
-Gray7 - #343a40
-Blue4 - #4dadf7
-Blue5 - #329af0
-Blue6 - #228ae6
-Red7 - #f03e3e
-*/
-
 * { box-sizing: border-box; }
 
+$yellow-0: #fff9db;
+$gray-1: #f1f3f5;
+$gray-2: #e9ecef;
+$gray-3: #dee2e6;
+$gray-4: #ced4da;
+$gray-7: #343a40;
+$cyan-4: #3bc9db;
+$cyan-5: #22b8cf;
+$cyan-6: #15aabf;
+$green-4: #69db7c;
+$green-5: #51cf66;
+$green-6: #40c057;
+$blue-4: #4dadf7;
+$blue-5: #329af0;
+$blue-6: #228ae6;
+$red-7: #f03e3e;
+
+$primary: $cyan-5;
+$primary-hover: $cyan-4;
+$primary-active: $cyan-6;
+
 html, body {
-  background-color: #212529;
-  color: #e9ecef;
+  color: $gray-7;
   font-family: 'Montserrat';
   font-size: 100%;
   margin: 0;
   padding: 0;
   min-width: 320px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 1rem;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,45 +43,118 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
 }
 
-img, iframe {
-  max-width: 100%;
-}
-
 hr {
-  background-color: #495057;
+  background-color: $gray-4;
   border: 0;
   border-radius: 2px;
-  color: #495057;
+  color: $gray-4;
   height: 2px;
   width: 100%;
 }
 
-fieldset {
+img, iframe {
+  max-width: 100%;
+}
+
+blockquote {
+  background-color: $yellow-0;
   border-radius: 4px;
-  border: 2px solid #495057;
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+figure {
+  margin: 2rem 1rem;
+}
+
+figcaption {
+  font-weight: 300;
+}
+
+details, summary {
+  outline: none;
 }
 
 a {
-  color: #228ae6;
+  color: $primary-active;
   text-decoration: none;
   transition: color 0.25s ease-in-out, text-shadow 0.25s ease-in-out;
+
+  &:link, &:visited {
+    color: $primary-active;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-a:link, a:visited {
-  color: #228ae6;
+mark {
+  background-color: $yellow-0;
 }
 
-a:hover {
-  text-decoration: underline;
+pre {
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+pre, code {
+  background-color: $yellow-0;
+}
+
+table {
+  border: none;
+  outline: none;
+  border-collapse: collapse;
+  max-height: 50px;
+  overflow-y: auto;
+  text-align: left;
+  width: 100%;
+
+  caption {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+  th, td {
+    border: 2px solid $gray-4;
+    padding: 1rem;
+  }
+  th {
+    letter-spacing: 1px;
+  }
+  thead {
+    background-color: $primary;
+    color: white;
+    text-align: center;
+  }
+  tr:nth-child(even) {
+    background-color: $gray-1;
+  }
+  tfoot {
+    background-color: $gray-3;
+  }
+}
+
+fieldset {
+  border-radius: 4px;
+  border: 2px solid $gray-4;
+}
+
+label {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+legend {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 input, select, textarea {
   appearance: none;
-  background-color: #343a40;
-  border: 1px solid #495057;
+  border: 1px solid $gray-4;
   border-radius: 2px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1);
-  color: #e9ecef;
   font-family: 'Montserrat';
   font-size: 16px;
   outline: none;
@@ -96,7 +181,7 @@ input[type="range"]:focus {
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-  background: #e9ecef;
+  background: $gray-2;
   border: none;
   border-radius: 100px;
   box-shadow: none;
@@ -117,11 +202,11 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: #e9ecef;
+  background: $gray-2;
 }
 
 input[type="range"]::-moz-range-track {
-  background: #e9ecef;
+  background: $gray-2;
   border: none;
   border-radius: 100px;
   box-shadow: none;
@@ -152,14 +237,14 @@ input[type="range"]::-ms-track {
 }
 
 input[type="range"]::-ms-fill-lower {
-  background: #495057;
+  background: $gray-4;
   border: none;
   border-radius: 100px;
   box-shadow: none;
 }
 
 input[type="range"]::-ms-fill-upper {
-  background: #e9ecef;
+  background: $gray-2;
   border: none;
   border-radius: 100px;
   box-shadow: none;
@@ -177,111 +262,32 @@ input[type="range"]::-ms-thumb {
 }
 
 input[type="range"]:focus::-ms-fill-lower {
-  background: #495057;
+  background: $gray-4;
 }
 
 input[type="range"]:focus::-ms-fill-upper {
-  background: #e9ecef;
+  background: $gray-2;
 }
 
 input:focus, select:focus, textarea:focus {
   box-shadow: none;
   outline: none !important;
-  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1), 0px 0px 6px #329af0;
-  border-color: #329af0;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1), 0px 0px 6px $primary;
+  border-color: $primary;
 }
 
 input:invalid, select:invalid, textarea:invalid {
-  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1), 0px 0px 6px #f03e3e;
-  border-color: #f03e3e;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1), 0px 0px 6px $red-7;
+  border-color: $red-7;
 }
 
 select optgroup {
-  /*background-color: #329af0;*/
+  /*background-color: $primary;*/
   /*color: white;*/
 }
 
 select option {
-  /*color: #343a40;*/
-}
-
-table {
-  border: none;
-  outline: none;
-  border-collapse: collapse;
-  max-height: 50px;
-  overflow-y: auto;
-  text-align: left;
-  width: 100%;
-}
-
-table caption {
-  font-size: 18px;
-  margin-bottom: 1rem;
-}
-
-table th, table td {
-  border: 2px solid #495057;
-  padding: 1rem;
-}
-
-table th {
-  letter-spacing: 1px;
-}
-
-table thead {
-  background-color: #329af0;
-  color: white;
-  text-align: center;
-}
-
-table tr:nth-child(even) {
-  background-color: #343a40;
-}
-
-tfoot {
-  background-color: #343a40;
-}
-
-blockquote {
-  background-color: #fff9db;
-  border-radius: 4px;
-  color: #343a40;
-  margin: 0 1rem;
-  padding: 1rem;
-}
-
-pre {
-  margin: 0 1rem;
-  padding: 1rem;
-}
-
-pre, code {
-  background-color: #fff9db;
-  color: #343a40;
-}
-
-mark {
-  background-color: #fff9db;
-}
-
-label {
-  font-weight: 300;
-  font-size: 14px;
-}
-
-legend {
-  font-family: 'Open Sans';
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-figure {
-  margin: 2rem 1rem;
-}
-
-figcaption {
-  font-weight: 300;
+  /*color: $gray-7;*/
 }
 
 progress, progress[value] {
@@ -289,22 +295,22 @@ progress, progress[value] {
   -webkit-appearance: none;
   appearance: none;
   background-color: transparent;
-  border: 1px solid #495057;
+  border: 1px solid $gray-4;
   border-radius: 2px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1);
-  color: #329af0;
+  color: $primary;
 }
 
 progress::-ms-fill {
-  background-color: #329af0;
+  background-color: $primary;
   border: none;
   border-radius: 1px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1);
-  color: #329af0;
+  color: $primary;
 }
 
 progress::-moz-progress-bar {
-  background-color: #329af0;
+  background-color: $primary;
   border-radius: 1px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1);
 }
@@ -314,24 +320,14 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background-color: #329af0;
+  background-color: $primary;
   border-radius: 1px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1);
 }
 
-/*
-How to style meters cross browser
-https://css-tricks.com/html5-meter-element/
-*/
-meter {}
-
-details, summary {
-  outline: none;
-}
-
 .button {
   appearance: none;
-  background-color: #329af0;
+  background-color: $primary;
   border: none;
   border-radius: 2px;
   color: white;
@@ -348,20 +344,14 @@ details, summary {
 }
 
 .button:hover {
-  background-color: #4dadf7;
+  background-color: $primary-hover;
 }
 
 .button:active {
-  background-color: #228ae6;
+  background-color: $primary-active;
 }
 
-.radio:focus, .radio:active {
-  outline: none;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 1440px;
-  padding: 0 1rem;
-  width: 100%;
-}
+/*
+How to style meters cross browser
+https://css-tricks.com/html5-meter-element/
+*/
