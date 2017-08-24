@@ -39,6 +39,17 @@ h1, h2, h3, h4, h5, h6 {
     content: "/\00a0";
     margin: 0 0.5rem; }
 
+.pagination {
+  border-radius: 4px;
+  color: #707070;
+  padding: 1rem 0;
+  margin: 0;
+  align-items: center;
+  vertical-align: middle; }
+  .pagination li {
+    display: inline;
+    margin: 0 1rem; }
+
 hr {
   background-color: #ced4da;
   border: 0;
@@ -98,10 +109,11 @@ table {
     font-size: 18px;
     margin-bottom: 1rem; }
   table th, table td {
-    border: 2px solid #ced4da;
     padding: 1rem; }
   table th {
     letter-spacing: 1px; }
+  table td {
+    border: 2px solid #ced4da; }
   table thead {
     background-color: #329af0;
     color: white;
@@ -253,7 +265,8 @@ progress, progress[value] {
   border: 1px solid #ced4da;
   border-radius: 2px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
-  color: #329af0; }
+  color: #329af0;
+  height: 2rem; }
 
 progress::-ms-fill {
   background-color: #329af0;

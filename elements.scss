@@ -63,6 +63,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.pagination {
+  border-radius: 4px;
+  color: #707070;
+  padding: 1rem 0;
+  margin: 0;
+  align-items: center;
+  vertical-align: middle;
+  li {
+    display: inline;
+    margin: 0 1rem;
+  }
+}
+
 hr {
   background-color: $oc-gray-4;
   border: 0;
@@ -138,11 +151,13 @@ table {
     margin-bottom: 1rem;
   }
   th, td {
-    border: 2px solid $oc-gray-4;
     padding: 1rem;
   }
   th {
     letter-spacing: 1px;
+  }
+  td {
+    border: 2px solid $oc-gray-4;
   }
   thead {
     background-color: $primary;
@@ -322,6 +337,7 @@ progress, progress[value] {
   border-radius: 2px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1);
   color: $primary;
+  height: 2rem;
 }
 
 progress::-ms-fill {
