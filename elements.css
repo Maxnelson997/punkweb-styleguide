@@ -40,15 +40,32 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 0.5rem; }
 
 .pagination {
-  border-radius: 4px;
   color: #707070;
-  padding: 1rem 0;
   margin: 0;
-  align-items: center;
-  vertical-align: middle; }
+  padding: 0;
+  text-align: center; }
   .pagination li {
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: pointer;
     display: inline;
-    margin: 0 1rem; }
+    margin: 0;
+    padding: 0.5rem 1rem; }
+    .pagination li:hover {
+      background-color: #f1f3f5; }
+  .pagination .active {
+    background-color: #dee2e6;
+    border-color: #dee2e6; }
+    .pagination .active:hover {
+      background-color: #dee2e6;
+      border-color: #dee2e6; }
+  .pagination .disabled {
+    background-color: #ced4da;
+    border-color: #ced4da;
+    cursor: not-allowed; }
+    .pagination .disabled:hover {
+      background-color: #ced4da;
+      border-color: #ced4da; }
 
 hr {
   background-color: #ced4da;
