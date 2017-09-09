@@ -1,5 +1,10 @@
 @import 'open-color';
 
+// TODO: Checkboxes
+// TODO: Radio Buttons
+// TODO: Indeterminate Progress
+// TODO: Meters
+
 $primary: $oc-blue-5;
 $primary-hover: lighten($primary, 5%);
 $primary-active: darken($primary, 10%);
@@ -166,7 +171,7 @@ table {
   outline: none;
   text-align: left;
   min-width: 480px;
-  width: 100%;
+  width: calc(100% - 1px); // -1px fixes scroll issue with .tableContainer
 
   caption {
     font-size: 18px;
@@ -211,7 +216,6 @@ legend {
 }
 
 input, select, textarea {
-  appearance: none;
   background: transparent;
   border: 1px solid $oc-gray-4;
   border-radius: 2px;
@@ -342,15 +346,6 @@ input:invalid, select:invalid, textarea:invalid {
   border-color: $error;
 }
 
-select optgroup {
-  /*background-color: $primary;*/
-  /*color: white;*/
-}
-
-select option {
-  /*color: $gray-7;*/
-}
-
 progress, progress[value] {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -405,7 +400,7 @@ progress::-webkit-progress-value {
   transition: background-color 0.4s ease-in-out;
 
   &:hover {
-    background-color: lighten($color, 5%);
+    background-color: lighten($color, 10%);
   }
   &:active {
     background-color: darken($color, 10%);
