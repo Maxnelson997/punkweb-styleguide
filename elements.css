@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
   .breadcrumb li {
     display: inline; }
     .breadcrumb li a {
-      color: #329af0; }
+      color: #0ca678; }
   .breadcrumb li + li:before {
     color: #adb5bd;
     content: "/\00a0";
@@ -94,11 +94,11 @@ details, summary {
   outline: none; }
 
 a {
-  color: #1081df;
+  color: #097656;
   text-decoration: none;
   transition: color 0.25s ease-in-out, text-shadow 0.25s ease-in-out; }
   a:link, a:visited {
-    color: #1081df; }
+    color: #097656; }
   a:hover {
     text-decoration: underline; }
 
@@ -121,7 +121,7 @@ table {
   outline: none;
   text-align: left;
   min-width: 480px;
-  width: 100%; }
+  width: calc(100% - 1px); }
   table caption {
     font-size: 18px;
     margin-bottom: 1rem; }
@@ -132,7 +132,7 @@ table {
   table td {
     border: 2px solid #ced4da; }
   table thead {
-    background-color: #329af0;
+    background-color: #0ca678;
     color: white;
     text-align: center; }
   table tr:nth-child(even) {
@@ -154,7 +154,6 @@ legend {
   letter-spacing: 1px; }
 
 input, select, textarea {
-  appearance: none;
   background: transparent;
   border: 1px solid #ced4da;
   border-radius: 2px;
@@ -231,7 +230,7 @@ input[type="range"]::-ms-track {
   height: 7px; }
 
 input[type="range"]::-ms-fill-lower {
-  background: #329af0;
+  background: #0ca678;
   border: none;
   border-radius: 100px;
   box-shadow: none; }
@@ -253,7 +252,7 @@ input[type="range"]::-ms-thumb {
   width: 22px; }
 
 input[type="range"]:focus::-ms-fill-lower {
-  background: #4aa6f2; }
+  background: #0ebe89; }
 
 input[type="range"]:focus::-ms-fill-upper {
   background: #e9ecef; }
@@ -261,19 +260,12 @@ input[type="range"]:focus::-ms-fill-upper {
 input:focus, select:focus, textarea:focus {
   box-shadow: none;
   outline: none !important;
-  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 6px #329af0;
-  border-color: #329af0; }
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 6px #0ca678;
+  border-color: #0ca678; }
 
 input:invalid, select:invalid, textarea:invalid {
-  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 6px #e03131;
-  border-color: #e03131; }
-
-select optgroup {
-  /*background-color: $primary;*/
-  /*color: white;*/ }
-
-select option {
-  /*color: $gray-7;*/ }
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 0px 6px #f03e3e;
+  border-color: #f03e3e; }
 
 progress, progress[value] {
   -moz-appearance: none;
@@ -283,18 +275,18 @@ progress, progress[value] {
   border: 1px solid #ced4da;
   border-radius: 2px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
-  color: #329af0;
+  color: #0ca678;
   height: 2rem; }
 
 progress::-ms-fill {
-  background-color: #329af0;
+  background-color: #0ca678;
   border: none;
   border-radius: 1px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
-  color: #329af0; }
+  color: #0ca678; }
 
 progress::-moz-progress-bar {
-  background-color: #329af0;
+  background-color: #0ca678;
   border-radius: 1px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1); }
 
@@ -302,311 +294,681 @@ progress::-webkit-progress-bar {
   background-color: transparent; }
 
 progress::-webkit-progress-value {
-  background-color: #329af0;
+  background-color: #0ca678;
   border-radius: 1px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1); }
 
 .button {
   appearance: none;
-  background-color: #329af0;
-  border: 1px solid transparent;
+  background-color: #495057;
+  border: 1px solid #3a4046;
   border-radius: 2px;
-  color: white;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  color: white !important;
+  cursor: pointer;
   display: inline-block;
   font-family: 'Open Sans';
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
   letter-spacing: 1px;
   outline: none;
-  padding: 1rem 2rem;
+  padding: .5rem .75rem;
+  min-width: 100px;
   text-align: center;
-  text-decoration: none;
-  transition: background-color 0.4s ease-in-out; }
+  text-decoration: none !important;
+  transition: all .25s ease-in-out; }
   .button:hover {
-    background-color: #4aa6f2; }
-  .button:active {
-    background-color: #1081df; }
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #5b6268;
+    background-color: #42484e; }
+  .button:disabled {
+    background-color: #adb5bd;
+    border: 1px solid #868e96;
+    cursor: not-allowed; }
+    .button:disabled:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+  .button-primary {
+    appearance: none;
+    background-color: #0ca678;
+    border: 1px solid #0a8560;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: white !important;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    letter-spacing: 1px;
+    outline: none;
+    padding: .5rem .75rem;
+    min-width: 100px;
+    text-align: center;
+    text-decoration: none !important;
+    transition: all .25s ease-in-out; }
+    .button-primary:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #24af86;
+      background-color: #0b956c; }
+    .button-primary:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-primary:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
   .button-secondary {
     appearance: none;
-    background-color: #495057;
-    border: 1px solid transparent;
+    background-color: #1098ad;
+    border: 1px solid #0d7a8a;
     border-radius: 2px;
-    color: white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: white !important;
+    cursor: pointer;
     display: inline-block;
     font-family: 'Open Sans';
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
     letter-spacing: 1px;
     outline: none;
-    padding: 1rem 2rem;
+    padding: .5rem .75rem;
+    min-width: 100px;
     text-align: center;
-    text-decoration: none;
-    transition: background-color 0.4s ease-in-out; }
+    text-decoration: none !important;
+    transition: all .25s ease-in-out; }
     .button-secondary:hover {
-      background-color: #555d65; }
-    .button-secondary:active {
-      background-color: #32373b; }
-  .button-success {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #28a2b5;
+      background-color: #0e899c; }
+    .button-secondary:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-secondary:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+  .button-violet {
+    appearance: none;
+    background-color: #7048e8;
+    border: 1px solid #5a3aba;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: white !important;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    letter-spacing: 1px;
+    outline: none;
+    padding: .5rem .75rem;
+    min-width: 100px;
+    text-align: center;
+    text-decoration: none !important;
+    transition: all .25s ease-in-out; }
+    .button-violet:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #7e5aea;
+      background-color: #6541d1; }
+    .button-violet:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-violet:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+  .button-indigo {
+    appearance: none;
+    background-color: #4263eb;
+    border: 1px solid #354fbc;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: white !important;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    letter-spacing: 1px;
+    outline: none;
+    padding: .5rem .75rem;
+    min-width: 100px;
+    text-align: center;
+    text-decoration: none !important;
+    transition: all .25s ease-in-out; }
+    .button-indigo:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #5573ed;
+      background-color: #3b59d4; }
+    .button-indigo:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-indigo:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+  .button-blue {
+    appearance: none;
+    background-color: #1c7cd6;
+    border: 1px solid #1663ab;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: white !important;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    letter-spacing: 1px;
+    outline: none;
+    padding: .5rem .75rem;
+    min-width: 100px;
+    text-align: center;
+    text-decoration: none !important;
+    transition: all .25s ease-in-out; }
+    .button-blue:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #3389da;
+      background-color: #1970c1; }
+    .button-blue:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-blue:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+  .button-green {
     appearance: none;
     background-color: #37b24d;
-    border: 1px solid transparent;
+    border: 1px solid #2c8e3e;
     border-radius: 2px;
-    color: white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: white !important;
+    cursor: pointer;
     display: inline-block;
     font-family: 'Open Sans';
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
     letter-spacing: 1px;
     outline: none;
-    padding: 1rem 2rem;
+    padding: .5rem .75rem;
+    min-width: 100px;
     text-align: center;
-    text-decoration: none;
-    transition: background-color 0.4s ease-in-out; }
-    .button-success:hover {
-      background-color: #3fc457; }
-    .button-success:active {
-      background-color: #2b8b3c; }
-  .button-error {
+    text-decoration: none !important;
+    transition: all .25s ease-in-out; }
+    .button-green:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #4bba5f;
+      background-color: #32a045; }
+    .button-green:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-green:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+  .button-yellow {
     appearance: none;
-    background-color: #e03131;
-    border: 1px solid transparent;
+    background-color: #fab005;
+    border: 1px solid #c88d04;
     border-radius: 2px;
-    color: white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: black !important;
+    cursor: pointer;
     display: inline-block;
     font-family: 'Open Sans';
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
     letter-spacing: 1px;
     outline: none;
-    padding: 1rem 2rem;
+    padding: .5rem .75rem;
+    min-width: 100px;
     text-align: center;
-    text-decoration: none;
-    transition: background-color 0.4s ease-in-out; }
-    .button-error:hover {
-      background-color: #e34747; }
-    .button-error:active {
-      background-color: #c11d1d; }
-  .button-warning {
+    text-decoration: none !important;
+    transition: all .25s ease-in-out; }
+    .button-yellow:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #fbb81e;
+      background-color: #e19e05; }
+    .button-yellow:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-yellow:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+  .button-orange {
     appearance: none;
-    background-color: #ffd43b;
-    border: 1px solid transparent;
+    background-color: #f76707;
+    border: 1px solid #c65206;
     border-radius: 2px;
-    color: white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: white !important;
+    cursor: pointer;
     display: inline-block;
     font-family: 'Open Sans';
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
     letter-spacing: 1px;
     outline: none;
-    padding: 1rem 2rem;
+    padding: .5rem .75rem;
+    min-width: 100px;
     text-align: center;
-    text-decoration: none;
-    transition: background-color 0.4s ease-in-out;
-    color: #343a40; }
-    .button-warning:hover {
-      background-color: #ffda55; }
-    .button-warning:active {
-      background-color: #ffc908; }
-  .button-info {
+    text-decoration: none !important;
+    transition: all .25s ease-in-out; }
+    .button-orange:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #f87620;
+      background-color: #de5d06; }
+    .button-orange:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-orange:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+  .button-red {
     appearance: none;
-    background-color: #3bc9db;
-    border: 1px solid transparent;
+    background-color: #c92a2a;
+    border: 1px solid #a12222;
     border-radius: 2px;
-    color: white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: white !important;
+    cursor: pointer;
     display: inline-block;
     font-family: 'Open Sans';
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
     letter-spacing: 1px;
     outline: none;
-    padding: 1rem 2rem;
+    padding: .5rem .75rem;
+    min-width: 100px;
     text-align: center;
-    text-decoration: none;
-    transition: background-color 0.4s ease-in-out; }
-    .button-info:hover {
-      background-color: #51cfdf; }
-    .button-info:active {
-      background-color: #23aec0; }
+    text-decoration: none !important;
+    transition: all .25s ease-in-out; }
+    .button-red:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #ce3f3f;
+      background-color: #b52626; }
+    .button-red:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-red:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
 
 .button-hollow {
   appearance: none;
-  background-color: #329af0;
-  border: 1px solid transparent;
+  background-color: #495057;
+  border: 1px solid #3a4046;
   border-radius: 2px;
-  color: white;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  color: white !important;
+  cursor: pointer;
   display: inline-block;
   font-family: 'Open Sans';
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
   letter-spacing: 1px;
   outline: none;
-  padding: 1rem 2rem;
+  padding: .5rem .75rem;
+  min-width: 100px;
   text-align: center;
-  text-decoration: none;
-  transition: background-color 0.4s ease-in-out;
-  background-color: transparent;
-  border: 1px solid #329af0;
-  color: #329af0; }
+  text-decoration: none !important;
+  transition: all .25s ease-in-out;
+  background: transparent;
+  border: 1px solid #32373b;
+  color: #495057 !important; }
   .button-hollow:hover {
-    background-color: #4aa6f2; }
-  .button-hollow:active {
-    background-color: #1081df; }
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #5b6268;
+    background-color: #42484e; }
+  .button-hollow:disabled {
+    background-color: #adb5bd;
+    border: 1px solid #868e96;
+    cursor: not-allowed; }
+    .button-hollow:disabled:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
   .button-hollow:hover {
-    background-color: #329af0;
-    color: white; }
+    background-color: #3d4349;
+    color: white !important; }
   .button-hollow:active {
-    background-color: #1081df;
-    color: white; }
+    background-color: #32373b;
+    color: white !important; }
+  .button-hollow:disabled {
+    background-color: transparent;
+    border: 1px solid #adb5bd;
+    color: #495057 !important; }
+  .button-hollow-primary {
+    appearance: none;
+    background-color: #0ca678;
+    border: 1px solid #0a8560;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: white !important;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    letter-spacing: 1px;
+    outline: none;
+    padding: .5rem .75rem;
+    min-width: 100px;
+    text-align: center;
+    text-decoration: none !important;
+    transition: all .25s ease-in-out;
+    background: transparent;
+    border: 1px solid #097656;
+    color: #0ca678 !important; }
+    .button-hollow-primary:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #24af86;
+      background-color: #0b956c; }
+    .button-hollow-primary:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-hollow-primary:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+    .button-hollow-primary:hover {
+      background-color: #0a8e67;
+      color: white !important; }
+    .button-hollow-primary:active {
+      background-color: #097656;
+      color: white !important; }
+    .button-hollow-primary:disabled {
+      background-color: transparent;
+      border: 1px solid #adb5bd;
+      color: #495057 !important; }
   .button-hollow-secondary {
     appearance: none;
-    background-color: #495057;
-    border: 1px solid transparent;
+    background-color: #1098ad;
+    border: 1px solid #0d7a8a;
     border-radius: 2px;
-    color: white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: white !important;
+    cursor: pointer;
     display: inline-block;
     font-family: 'Open Sans';
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
     letter-spacing: 1px;
     outline: none;
-    padding: 1rem 2rem;
+    padding: .5rem .75rem;
+    min-width: 100px;
     text-align: center;
-    text-decoration: none;
-    transition: background-color 0.4s ease-in-out;
-    background-color: transparent;
-    border: 1px solid #495057;
-    color: #495057; }
+    text-decoration: none !important;
+    transition: all .25s ease-in-out;
+    background: transparent;
+    border: 1px solid #0c6f7e;
+    color: #1098ad !important; }
     .button-hollow-secondary:hover {
-      background-color: #555d65; }
-    .button-hollow-secondary:active {
-      background-color: #32373b; }
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #28a2b5;
+      background-color: #0e899c; }
+    .button-hollow-secondary:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-hollow-secondary:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
     .button-hollow-secondary:hover {
-      background-color: #495057;
-      color: white; }
+      background-color: #0e8396;
+      color: white !important; }
     .button-hollow-secondary:active {
-      background-color: #32373b;
-      color: white; }
-  .button-hollow-success {
+      background-color: #0c6f7e;
+      color: white !important; }
+    .button-hollow-secondary:disabled {
+      background-color: transparent;
+      border: 1px solid #adb5bd;
+      color: #495057 !important; }
+  .button-hollow-violet {
+    appearance: none;
+    background-color: #7048e8;
+    border: 1px solid #5a3aba;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: white !important;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    letter-spacing: 1px;
+    outline: none;
+    padding: .5rem .75rem;
+    min-width: 100px;
+    text-align: center;
+    text-decoration: none !important;
+    transition: all .25s ease-in-out;
+    background: transparent;
+    border: 1px solid #4d1ce1;
+    color: #7048e8 !important; }
+    .button-hollow-violet:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #7e5aea;
+      background-color: #6541d1; }
+    .button-hollow-violet:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-hollow-violet:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+    .button-hollow-violet:hover {
+      background-color: #5e31e5;
+      color: white !important; }
+    .button-hollow-violet:active {
+      background-color: #4d1ce1;
+      color: white !important; }
+    .button-hollow-violet:disabled {
+      background-color: transparent;
+      border: 1px solid #adb5bd;
+      color: #495057 !important; }
+  .button-hollow-indigo {
+    appearance: none;
+    background-color: #4263eb;
+    border: 1px solid #354fbc;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: white !important;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    letter-spacing: 1px;
+    outline: none;
+    padding: .5rem .75rem;
+    min-width: 100px;
+    text-align: center;
+    text-decoration: none !important;
+    transition: all .25s ease-in-out;
+    background: transparent;
+    border: 1px solid #183fe2;
+    color: #4263eb !important; }
+    .button-hollow-indigo:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #5573ed;
+      background-color: #3b59d4; }
+    .button-hollow-indigo:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-hollow-indigo:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+    .button-hollow-indigo:hover {
+      background-color: #2b50e9;
+      color: white !important; }
+    .button-hollow-indigo:active {
+      background-color: #183fe2;
+      color: white !important; }
+    .button-hollow-indigo:disabled {
+      background-color: transparent;
+      border: 1px solid #adb5bd;
+      color: #495057 !important; }
+  .button-hollow-blue {
+    appearance: none;
+    background-color: #1c7cd6;
+    border: 1px solid #1663ab;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: white !important;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    letter-spacing: 1px;
+    outline: none;
+    padding: .5rem .75rem;
+    min-width: 100px;
+    text-align: center;
+    text-decoration: none !important;
+    transition: all .25s ease-in-out;
+    background: transparent;
+    border: 1px solid #1662a9;
+    color: #1c7cd6 !important; }
+    .button-hollow-blue:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #3389da;
+      background-color: #1970c1; }
+    .button-hollow-blue:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-hollow-blue:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+    .button-hollow-blue:hover {
+      background-color: #196fbf;
+      color: white !important; }
+    .button-hollow-blue:active {
+      background-color: #1662a9;
+      color: white !important; }
+    .button-hollow-blue:disabled {
+      background-color: transparent;
+      border: 1px solid #adb5bd;
+      color: #495057 !important; }
+  .button-hollow-green {
     appearance: none;
     background-color: #37b24d;
-    border: 1px solid transparent;
+    border: 1px solid #2c8e3e;
     border-radius: 2px;
-    color: white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: white !important;
+    cursor: pointer;
     display: inline-block;
     font-family: 'Open Sans';
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
     letter-spacing: 1px;
     outline: none;
-    padding: 1rem 2rem;
+    padding: .5rem .75rem;
+    min-width: 100px;
     text-align: center;
-    text-decoration: none;
-    transition: background-color 0.4s ease-in-out;
-    background-color: transparent;
-    border: 1px solid #37b24d;
-    color: #37b24d; }
-    .button-hollow-success:hover {
-      background-color: #3fc457; }
-    .button-hollow-success:active {
-      background-color: #2b8b3c; }
-    .button-hollow-success:hover {
-      background-color: #37b24d;
-      color: white; }
-    .button-hollow-success:active {
+    text-decoration: none !important;
+    transition: all .25s ease-in-out;
+    background: transparent;
+    border: 1px solid #2b8b3c;
+    color: #37b24d !important; }
+    .button-hollow-green:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #4bba5f;
+      background-color: #32a045; }
+    .button-hollow-green:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-hollow-green:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+    .button-hollow-green:hover {
+      background-color: #319f45;
+      color: white !important; }
+    .button-hollow-green:active {
       background-color: #2b8b3c;
-      color: white; }
-  .button-hollow-error {
+      color: white !important; }
+    .button-hollow-green:disabled {
+      background-color: transparent;
+      border: 1px solid #adb5bd;
+      color: #495057 !important; }
+  .button-hollow-yellow {
     appearance: none;
-    background-color: #e03131;
-    border: 1px solid transparent;
+    background-color: #fab005;
+    border: 1px solid #c88d04;
     border-radius: 2px;
-    color: white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: black !important;
+    cursor: pointer;
     display: inline-block;
     font-family: 'Open Sans';
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
     letter-spacing: 1px;
     outline: none;
-    padding: 1rem 2rem;
+    padding: .5rem .75rem;
+    min-width: 100px;
     text-align: center;
-    text-decoration: none;
-    transition: background-color 0.4s ease-in-out;
-    background-color: transparent;
-    border: 1px solid #e03131;
-    color: #e03131; }
-    .button-hollow-error:hover {
-      background-color: #e34747; }
-    .button-hollow-error:active {
-      background-color: #c11d1d; }
-    .button-hollow-error:hover {
-      background-color: #e03131;
-      color: white; }
-    .button-hollow-error:active {
-      background-color: #c11d1d;
-      color: white; }
-  .button-hollow-warning {
+    text-decoration: none !important;
+    transition: all .25s ease-in-out;
+    background: transparent;
+    border: 1px solid #c88d04;
+    color: #fab005 !important; }
+    .button-hollow-yellow:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #fbb81e;
+      background-color: #e19e05; }
+    .button-hollow-yellow:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-hollow-yellow:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+    .button-hollow-yellow:hover {
+      background-color: #e19e05;
+      color: black !important; }
+    .button-hollow-yellow:active {
+      background-color: #c88d04;
+      color: black !important; }
+    .button-hollow-yellow:disabled {
+      background-color: transparent;
+      border: 1px solid #adb5bd;
+      color: #495057 !important; }
+  .button-hollow-orange {
     appearance: none;
-    background-color: #ffd43b;
-    border: 1px solid transparent;
+    background-color: #f76707;
+    border: 1px solid #c65206;
     border-radius: 2px;
-    color: white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: white !important;
+    cursor: pointer;
     display: inline-block;
     font-family: 'Open Sans';
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
     letter-spacing: 1px;
     outline: none;
-    padding: 1rem 2rem;
+    padding: .5rem .75rem;
+    min-width: 100px;
     text-align: center;
-    text-decoration: none;
-    transition: background-color 0.4s ease-in-out;
-    background-color: transparent;
-    border: 1px solid #ffd43b;
-    color: #ffd43b;
-    color: #343a40; }
-    .button-hollow-warning:hover {
-      background-color: #ffda55; }
-    .button-hollow-warning:active {
-      background-color: #ffc908; }
-    .button-hollow-warning:hover {
-      background-color: #ffd43b;
-      color: white; }
-    .button-hollow-warning:active {
-      background-color: #ffc908;
-      color: white; }
-    .button-hollow-warning:hover {
-      color: #343a40; }
-    .button-hollow-warning:active {
-      color: #343a40; }
-  .button-hollow-info {
+    text-decoration: none !important;
+    transition: all .25s ease-in-out;
+    background: transparent;
+    border: 1px solid #c55206;
+    color: #f76707 !important; }
+    .button-hollow-orange:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #f87620;
+      background-color: #de5d06; }
+    .button-hollow-orange:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-hollow-orange:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+    .button-hollow-orange:hover {
+      background-color: #de5d06;
+      color: white !important; }
+    .button-hollow-orange:active {
+      background-color: #c55206;
+      color: white !important; }
+    .button-hollow-orange:disabled {
+      background-color: transparent;
+      border: 1px solid #adb5bd;
+      color: #495057 !important; }
+  .button-hollow-red {
     appearance: none;
-    background-color: #3bc9db;
-    border: 1px solid transparent;
+    background-color: #c92a2a;
+    border: 1px solid #a12222;
     border-radius: 2px;
-    color: white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: white !important;
+    cursor: pointer;
     display: inline-block;
     font-family: 'Open Sans';
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
     letter-spacing: 1px;
     outline: none;
-    padding: 1rem 2rem;
+    padding: .5rem .75rem;
+    min-width: 100px;
     text-align: center;
-    text-decoration: none;
-    transition: background-color 0.4s ease-in-out;
-    background-color: transparent;
-    border: 1px solid #3bc9db;
-    color: #3bc9db; }
-    .button-hollow-info:hover {
-      background-color: #51cfdf; }
-    .button-hollow-info:active {
-      background-color: #23aec0; }
-    .button-hollow-info:hover {
-      background-color: #3bc9db;
-      color: white; }
-    .button-hollow-info:active {
-      background-color: #23aec0;
-      color: white; }
+    text-decoration: none !important;
+    transition: all .25s ease-in-out;
+    background: transparent;
+    border: 1px solid #9f2121;
+    color: #c92a2a !important; }
+    .button-hollow-red:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 6px #ce3f3f;
+      background-color: #b52626; }
+    .button-hollow-red:disabled {
+      background-color: #adb5bd;
+      border: 1px solid #868e96;
+      cursor: not-allowed; }
+      .button-hollow-red:disabled:hover {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+    .button-hollow-red:hover {
+      background-color: #b42626;
+      color: white !important; }
+    .button-hollow-red:active {
+      background-color: #9f2121;
+      color: white !important; }
+    .button-hollow-red:disabled {
+      background-color: transparent;
+      border: 1px solid #adb5bd;
+      color: #495057 !important; }
 
 /*
 How to style meters cross browser

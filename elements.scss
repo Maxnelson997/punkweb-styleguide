@@ -5,18 +5,15 @@
 // TODO: Indeterminate Progress
 // TODO: Meters
 
-$primary: $oc-blue-5;
+$primary: $oc-teal-7;
 $primary-hover: lighten($primary, 5%);
 $primary-active: darken($primary, 10%);
 
-$secondary: $oc-gray-7;
+$secondary: $oc-cyan-7;
 $secondary-hover: lighten($secondary, 5%);
 $secondary-active: darken($secondary, 10%);
 
-$success: $oc-green-7;
-$error: $oc-red-8;
-$warning: $oc-yellow-4;
-$info: $oc-cyan-4;
+$error: $oc-red-7;
 
 
 * { box-sizing: border-box; }
@@ -382,91 +379,117 @@ progress::-webkit-progress-value {
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .1);
 }
 
-@mixin button($color) {
+@mixin button($background, $color) {
   appearance: none;
-  background-color: $color;
-  border: 1px solid transparent;
+  background-color: $background;
+  border: 1px solid mix(black, $background, 20%);
   border-radius: 2px;
-  color: white;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+  color: $color !important;
+  cursor: pointer;
   display: inline-block;
   font-family: 'Open Sans';
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
   letter-spacing: 1px;
   outline: none;
-  padding: 1rem 2rem;
+  padding: .5rem .75rem;
+  min-width: 100px;
   text-align: center;
-  text-decoration: none;
-  transition: background-color 0.4s ease-in-out;
-
+  text-decoration: none !important;
+  transition: all .25s ease-in-out;
   &:hover {
-    background-color: lighten($color, 10%);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .2), 0px 0px 6px mix(white, $background, 10%);
+    background-color: mix(black, $background, 10%);
   }
-  &:active {
-    background-color: darken($color, 10%);
+  &:disabled {
+    background-color: $oc-gray-5;
+    border: 1px solid $oc-gray-6;
+    cursor: not-allowed;
+    &:hover {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    }
   }
 }
 
-@mixin button-hollow($color) {
-  @include button($color);
-  background-color: transparent;
-  border: 1px solid $color;
-  color: $color;
+@mixin button-hollow($background, $color) {
+  @include button($background, $color);
+  background: transparent;
+  border: 1px solid darken($background, 10%);
+  color: $background !important;
   &:hover {
-    background-color: $color;
-    color: white;
+    background-color: darken($background, 5%);
+    color: $color !important;
   }
   &:active {
-    background-color: darken($color, 10%);
-    color: white;
+    background-color: darken($background, 10%);
+    color: $color !important;
+  }
+  &:disabled {
+    background-color: transparent;
+    border: 1px solid $oc-gray-5;
+    color: $oc-gray-7 !important;
   }
 }
 
 .button {
-  @include button($primary);
-
+  @include button($oc-gray-7, white);
+  &-primary {
+    @include button($primary, white);
+  }
   &-secondary {
-    @include button($secondary);
+    @include button($secondary, white);
   }
-  &-success {
-    @include button($success);
+  &-violet {
+    @include button($oc-violet-7, white);
   }
-  &-error {
-    @include button($error);
+  &-indigo {
+    @include button($oc-indigo-7, white);
   }
-  &-warning {
-    @include button($warning);
-    color: $oc-gray-8;
+  &-blue {
+    @include button($oc-blue-7, white);
   }
-  &-info {
-    @include button($info);
+  &-green {
+    @include button($oc-green-7, white);
+  }
+  &-yellow {
+    @include button($oc-yellow-6, black);
+  }
+  &-orange {
+    @include button($oc-orange-7, white);
+  }
+  &-red {
+    @include button($oc-red-9, white);
   }
 }
 
 .button-hollow {
-  @include button-hollow($primary);
-
+  @include button-hollow($oc-gray-7, white);
+  &-primary {
+    @include button-hollow($primary, white);
+  }
   &-secondary {
-    @include button-hollow($secondary);
+    @include button-hollow($secondary, white);
   }
-  &-success {
-    @include button-hollow($success);
+  &-violet {
+    @include button-hollow($oc-violet-7, white);
   }
-  &-error {
-    @include button-hollow($error);
+  &-indigo {
+    @include button-hollow($oc-indigo-7, white);
   }
-  &-warning {
-    @include button-hollow($warning);
-    color: $oc-gray-8;
-    &:hover {
-      color: $oc-gray-8;
-    }
-    &:active {
-      color: $oc-gray-8;
-    }
+  &-blue {
+    @include button-hollow($oc-blue-7, white);
   }
-  &-info {
-    @include button-hollow($info);
+  &-green {
+    @include button-hollow($oc-green-7, white);
+  }
+  &-yellow {
+    @include button-hollow($oc-yellow-6, black);
+  }
+  &-orange {
+    @include button-hollow($oc-orange-7, white);
+  }
+  &-red {
+    @include button-hollow($oc-red-9, white);
   }
 }
 
